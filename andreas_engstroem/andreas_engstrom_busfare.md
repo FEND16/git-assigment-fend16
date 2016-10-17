@@ -10,7 +10,7 @@
 			* **MEDANS** användarens pengar är större eller likamed nuvarande belopp i arrayen
 				* Användarens belopp - nuvarande belopp i array
 				* En transaktion läggs till
-			* Returnera antal transaktioner genomförda
+		* Returnera antal transaktioner genomförda
 	* **ANNARS**
 		* Returnera användarens belopp är för högt
 		
