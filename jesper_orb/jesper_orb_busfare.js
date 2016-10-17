@@ -1,3 +1,3 @@
 function busfare(){
-  return "Pengar";
+    return "Pengar";
 }
