@@ -1,6 +1,7 @@
 # Uppgift: Busfare
 
 **START**
+
 	Fråga användaren hur mycket hen vill åka för, K kr 
 	
 	Om K < 0 eller K > 10000 fråga användaren igen
