@@ -12,16 +12,18 @@ var busfareTransCalc = function(K){
 	var tCount = 0;
 
 	for (var i = 0; i < bills.length; i++) {
-		// Hur många gånger går valören på kostnaden?
-		console.log((Math.floor(cost / bills[i])) + ' av valören ' + bills[i]);
+		if(Math.floor(cost / bills[i]) > 0 ){
+			// Hur många gånger går valören på kostnaden?
+			console.log((Math.floor(cost / bills[i])) + ' av valören ' + bills[i]);
 
-		// Räknaren += antalet valören går på kostnaden
-		tCount += Math.floor(cost / bills[i]);
+			// Räknaren += antalet valören går på kostnaden
+			tCount += Math.floor(cost / bills[i]);
 
-		// Resten av divisionen dras av från kostnaden
-		console.log('Resten av divisionen ' + cost + ' / ' + bills[i] + ' = ' + cost % bills[i]);
-		cost = cost % bills[i];
-		console.log('Summa: ' + cost);
+			// Resten av divisionen dras av från kostnaden
+			console.log('Resten av divisionen ' + cost + ' / ' + bills[i] + ' = ' + cost % bills[i]);
+			cost = cost % bills[i];
+			console.log('Summa: ' + cost);
+		}
 		if(cost === 0){
 			break;
 		} else {
