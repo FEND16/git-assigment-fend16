@@ -1,7 +1,13 @@
 
 var travelCost = prompt("Hur mycket vill du resa för?");
+//alert("Du vill sätta in " + travelCost + "kr");
+/* var YES = confirm("Vill du göra din transaktion på snabbast möjliga vis?");
 
-function busPassTravel() {
+ if (YES) {
+     busPassTravel();
+ }*/
+
+function busFare(cost) {
 
     var cost1 = 500;
     var cost2 = 200;
@@ -15,20 +21,25 @@ function busPassTravel() {
     if (travelCost > 10000) {
         console.log("Maxbelopp är 10000 starta om och försök igen");
     }
-    else if (travelCost % cost1 === 0) {
+    else if (Math.floor(five)) 
+    {
 
-        console.log("Sätt in 500kr " + five + " gång(er)");
+        console.log("Sätt in " + cost1 + " kr " + five + " gång(er) " + 
+        cost2 + " kr " + two + " gång(er) " + 
+        cost3 + " kr " + one + " gång(er)");
     }
-   
-    else if (travelCost % cost2 === 0) {
+
+
+
+    else if (Math.floor(travelCost / cost2)) {
 
         console.log("Sätt in 200kr " + two + " gång(er)");
     }
-    else if (travelCost % cost3 === 0) {
+    else if (Math.floor(travelCost / cost3)) {
 
         console.log("Sätt in 100kr " + one + " gång(er)");
     }
 
 }
 
-busPassTravel();
+busFare();
