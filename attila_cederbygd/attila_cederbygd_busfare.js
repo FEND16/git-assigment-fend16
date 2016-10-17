@@ -26,14 +26,9 @@ var busfareTransCalc = function(K){
 		}
 		if(cost === 0){
 			break;
-		} else {
-			var remainder = cost;
 		}
-		//console.log(tCount);
 	}
-	if(cost > 0){
-		console.log('Rest: ' + cost);
-	}
+	console.log('Rest: ' + cost);
 	return 'Antal transaktioner: ' + tCount;
 };
 
