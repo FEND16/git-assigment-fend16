@@ -40,6 +40,6 @@ Om du ska åka för 800 kronor ska du alltså först ladda med 500, sen med 200,
 
 #### Förklaring
 
-Koden ovan visar en loop som tittar om summan är över 500 och tar då bort 500 och lagrar 1 i count500. Det här gör koden tills tempSum är under 500. Efter det går den över till nästa seg där den tittar hur mångar gånger den kan köra 200 i den resterande temSum. Sen går den över till hut många gånger den kan köra 100. Om det blir rester så kommer då countRest att omvandla uppåt.
+Koden ovan visar en loop som tittar om summan är över 500 och tar då bort 500 och lagrar 1 i **count500**. Det här gör koden tills **temporarySum** är under 500. Efter det går den över till nästa seg där den tittar hur mångar gånger den kan köra 200 i den resterande **temporarySum**. Sen går den över till hut många gånger den kan köra 100. Om det blir rester så kommer då **countRest** att omvandla uppåt.
 
 
