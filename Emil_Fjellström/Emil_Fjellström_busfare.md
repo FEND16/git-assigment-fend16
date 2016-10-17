@@ -1,8 +1,16 @@
 # Pseudokod
 
+### Uppgift
+
+Uppgiften går ut på att lada ett busskort med pengar; 100, 200 eller 500kr. ´Med detta ska man förklar den lättaste vägen att fylla på sitt kort.
+
+**Exempel** Du ska fylla på med 800kr, då ska du fylla på med 500 + 200 + 100, för att så minst antal transaktioner samt så jämt ut som det går.
+
+**Exempel** Du ska fylla på med 850kr, då ska du fylla på med 500 + 200 + 200, för att så minst antal transaktioner samt så jämt ut som det går. Visserligen går 50 kronor till spillo, men det är ändå det bästa alternativet.
 
 ```javascript
- while(temporarySum != 0) //Loopar denna tills det blir 0 i tempSum
+
+while(temporarySum != 0) //Loopar denna tills det blir 0 i tempSum
             {
                 if(temporarySum-500 >= 0)  //tittar om summan är över 500 och tar då bort 500 och lagrar 1 i count500
                 {
@@ -25,21 +33,42 @@
                     temporarySum = 0;
                 }
             }
-   
+
     if(countRest > 0) //Omvandlar 100 uppot vid ojämt nummer
         {
             count100++;
         }
+
+```
+## Förklaring
+
+Ovan ser vi lite kod som beskriver hur många gånger man måste ta ut pengar. Först i Loopen så tittar den efter hur många x*500kr som får plats i **temporarySum** som är en variabel och fått  sitt värde utav **prompt** funktionen. Efter första if satsen har körst och får värdet **0** så kommer den så vidare med resterande utav **temporarySum** och titta hur många x*200kr det går in i **temporarySum**. Och till slut gör loopen samma grej i fast för hur många x*100kr det får plats. All information lagras i variablarna **count500**, **count200** och **cound100**. resterande som är under 100 kommer att omvandlas upp till 100 och jämnar ut värdet för betalningen.
+
+## Lagring
+
+Värden i koden lagras i variabler.
+
+```javascript
+
+var summaTotal = prompt("How much do you wanna travel for?"); //Sätter ett värde på summaTotal
+var temporarySum = summaTotal; //Sätter summaTotal som ett temporärt värde
+
+var count500 = 0; //variabler som lagrar antar transaktioner
+var count200 = 0;
+var count100 = 0;
+var countRest = 0;
+
 ```
 
-### Uppgift
+## Utmatning
 
-Du ska köpa ett busskort. Det är ett kort som du laddar med pengar, därefter kan du åka på kortet tills pengarna tagit slut. Du vet att du ska åka för K kronor, där K ≤ 10000. Att ladda kortet tar sin tid eftersom du endast kan ladda kortet med 500, 200 eller 100 kr i taget. Du har för tillfället bråttom och vill därför utföra så några transaktioner som möjligt, men inte tanka på mer pengar än nödvändigt.
+Värderna i while loopen som lagrats skriv sedan ut i slutet av koden
 
-Om du ska åka för 800 kronor ska du alltså först ladda med 500, sen med 200, därefter med 100 kr. Om du däremot ska åka för 850 kronor ska du först ladda med 500 och därefter ladda med 200 två gånger. Visserligen går 50 kronor till spillo, men det är ändå det bästa alternativet.
+```javascript
 
-#### Förklaring
+document.write(summaTotal + " split into: </br>");
+document.write(count500 + " 500 bill(s) </br>");
+document.write(count200 + " 200 bill(s) </br>");
+document.write(count100 + " 100 bill(s) </br>");
 
-Koden ovan visar en loop som tittar om summan är över 500 och tar då bort 500 och lagrar 1 i **count500**. Det här gör koden tills **temporarySum** är under 500. Efter det går den över till nästa seg där den tittar hur mångar gånger den kan köra 200 i den resterande **temporarySum**. Sen går den över till hut många gånger den kan köra 100. Om det blir rester så kommer då **countRest** att omvandla uppåt.
-
-
+```
