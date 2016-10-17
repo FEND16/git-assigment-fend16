@@ -11,32 +11,34 @@ __MEMO__
     Check how much Bus fare is
     
     WHILE Bus fare is less than balance
-    move to the charging loops
+    move to charging stage
     
-      //Charging-loops start
-      WHILE Bus fare is more than 500
+      //Charging start - starting from 500 bills
+      IF Bus fare is more than or equal to 500
           Charge 500 as many times as possible
-          Subtract 500 from balance
-          Add 1 to the total number of Transactions
-      END WHILE
+          Subtract amount for this stage from balance
+          Add the number of Transactions for this stage
+      END IF
        
-      move to next loop
+      move to next stage - charging with 200 bills
 
-      WHILE Bus fare is less than 500 & more than 200
+      IF Bus fare is less than 500 & more than or equal to 200
           Charge 200 as many times as possible
-          Subtract 200 from balance
-          Add 1 to the total number of Transactions
-      END WHILE
+          Subtract amount for this stage from balance
+          Add the number of Transactions for this stage
+      END IF
       
-      move to next loop
+      move to next stage - charing with 100 bills
 
-      WHILE Bus fare is less than 200 & more than 100
+      IF Bus fare is less than 200 & more than or equal to 100
           Charge 100 as many times as possible
-          Subtract 100 from balance
-          Add 1 to the total number of Transactions
+          Subtract amount for this stage from balance
+          Add the number of Transactions for this stage
       
-      END WHILE
-      //Charging-loops end
+      END IF
+      //End charging
 
   END WHILE
+  
+  RETURN the number of transactions and balance
 ```
