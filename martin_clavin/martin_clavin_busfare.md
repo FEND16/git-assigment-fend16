@@ -1,6 +1,6 @@
 ##Pseudokod
 
-Låt användare mata in summa mellan 100 och 10000 och spara i variabel kostnad
+Låt användare mata in önskad reskostnad mellan 100 och 10000 och spara i variabel kostnad
 
 if kostnad > 10000
 
