@@ -19,13 +19,13 @@ på biljetten ska överskrida reskostnaden med så lite som möjligt.
 
 Loop som adderar pengar till resenärens biljett.
 WHILE(Resans kostnad är större än Kortsaldo och kostnaden är mindre än 10000)
-	IF  (kortsaldo + 500 är större eller lika med Resans kostnad + 50) 
+	IF  (kortsaldo + 500 är mindre eller lika med Resans kostnad + 100) 
 			kortsaldo= korsaldo +500 
 	
-	ELSE IF (Kortsaldo + 200 <= (Resekostnad + 50 ))
+	ELSE IF (Kortsaldo + 200 <= (Resekostnad + 100 ))
 			kortsaldo = kortsaldo + 200
 
-	ELSE IF (kortsaldo + 100 <= (resekostnad + 50))
+	ELSE IF (kortsaldo + 100 <= (resekostnad + 100))
 			kortsaldo = kortsaldo + 100
       
       Varje gång loopen körs räknas antalet transaktioner upp med 1. 

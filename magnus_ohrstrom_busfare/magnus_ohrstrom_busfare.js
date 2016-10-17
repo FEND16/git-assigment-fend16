@@ -2,11 +2,8 @@
 
 //Funktion för att fylla på saldo på resbiljett
 
-function buyTicket(){
+function buyTicket(cost){
 
-//Resenären anger resans kostnad. (Prompt)
-var cost = prompt("How much is your travel fee?: ");
-cost = Number(cost);
 
 //Ticket saldo.
 var ticket = 0;
@@ -22,17 +19,17 @@ var trans = 0;
 while(cost > ticket&& cost <=10000)
 	{	//Programmet kan göra tre olika transaktioner. 500 , 200 samt 100 kr. Transaktionssumman
 		// ska i slutändan överstiga kostnaden så lite som möjligt. 
-	if (ticket + 500 <= (cost + 50)) 
+	if (ticket + 500 <= (cost+100)) 
 			{ 
 				ticket += 500; 
 			}
 	
-	else if (ticket + 200 <= (cost+ 50 ))
+	else if (ticket + 200 <= (cost+ 100))
 			{
 				ticket += 200;
 			}
 
-	else if (ticket + 100 <= (cost + 50))
+	else if (ticket + 100 <= (cost + 100))
 			{
 				ticket +=  100;
 			}
