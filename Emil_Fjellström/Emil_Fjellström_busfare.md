@@ -42,7 +42,7 @@ while(temporarySum != 0) //Loopar denna tills det blir 0 i tempSum
 ```
 ## Förklaring
 
-Ovan ser vi lite kod som beskriver hur många gånger man måste ta ut pengar. Först i Loopen så tittar den efter hur många x*500kr som får plats i **temporarySum** som är en variabel och fått  sitt värde utav **prompt** funktionen. Efter första if satsen har körst och får värdet **0** så kommer den så vidare med resterande utav **temporarySum** och titta hur många x*200kr det går in i **temporarySum**. Och till slut gör loopen samma grej i fast för hur många x*100kr det får plats. All information lagras i variablarna **count500**, **count200** och **cound100**. resterande som är under 100 kommer att omvandlas upp till 100 och jämnar ut värdet för betalningen.
+Ovan ser vi lite kod som beskriver hur många gånger man måste ta ut pengar. Först i Loopen så tittar den efter hur många x500kr som får plats i **temporarySum** som är en variabel och fått  sitt värde utav **prompt** funktionen. Efter första if satsen har körst och får värdet **0** så kommer den så vidare med resterande utav **temporarySum** och titta hur många x200kr det går in i **temporarySum**. Och till slut gör loopen samma grej i fast för hur många x100kr det får plats. All information lagras i variablarna **count500**, **count200** och **cound100**. Resterande som är under 100 kommer att omvandlas upp till 100 och jämnar ut värdet för betalningen.
 
 ## Lagring
 
