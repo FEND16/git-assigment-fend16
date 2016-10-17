@@ -30,7 +30,7 @@ __MEMO__
 
         move to next stage - charing with 100 bills
 
-        IF Bus fare is less than 200 & more than or equal to 100 THEN
+        IF Bus fare is less than 200 but not 0 THEN
             Charge 100 as many times as possible until it pays up all amount of bus fare 
             Subtract amount for this stage from balance
             Add the number of Transactions for this stage
