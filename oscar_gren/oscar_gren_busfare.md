@@ -1,7 +1,7 @@
 
 
 # **START**
-``
+``` 
 //Resekostnad:
 var resansKostnad= prompt."Hur mycket ska du resa för ?"
 
@@ -16,4 +16,4 @@ function resa (){
 
 
 
-``
+```
