@@ -3,10 +3,10 @@
 __MEMO__
 
 > laddar kortet varje gång 500, 200 eller 100</br>
-> fortsätt tills att pengarna tar slut</br>
+> laddar så några som möjligt, och inte tanka på mer pengar än nödvändigt</br>
 
 ```Pseudo
-WHILE BusFare - ChargedAmount (= Difference) > 0
+WHILE Difference (= BusFare - ChargedAmount) > 0
 
     IF 400 < Difference <= 10000
         Charge 500 notes until Difference becomes less than 400
@@ -19,4 +19,6 @@ WHILE BusFare - ChargedAmount (= Difference) > 0
     ELSE IF 0 < Difference <= 100
     
 when Difference comes down to 0 or less END the loop
+
+RETURN the number of transactions & how much you have paid
 ```
