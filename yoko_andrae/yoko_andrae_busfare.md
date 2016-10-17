@@ -6,19 +6,24 @@ __MEMO__
 > laddar så några som möjligt, och inte tanka på mer pengar än nödvändigt</br>
 
 ```Pseudo
-WHILE Difference (= BusFare - ChargedAmount) > 0
+WHILE Need-To-Be-Charged Amount (= BusFare - Charged Amount) > 0, continue loop
 
-    IF 400 < Difference <= 10000
-        Charge 500 notes until Difference becomes less than 400
-        Add number of transactions
+    IF 400 < Need-To-Be-Charged Amount <= 10000
+        Add 500 to Charged Amount
+        Add 1 to transaction
+        Subtract 500 from Need-To-Be-Charged Amount
         
-    ELSE IF 100 < Difference <= 400
-        Charge 200 notes until difference becomes less than 200
-        Add number of transactions
+    ELSE IF 100 < Need-To-Be-Charged Amount <= 400
+        Add 200 to Charged Amount
+        Add 1 to transaction
+        Subtract 200 from Need-To-Be-Charged Amount
         
-    ELSE IF 0 < Difference <= 100
+    ELSE IF 0 < Need-To-Be-Charged Amount <= 100
+        Add 100 to Charged Amount
+        Add 1 to transaction
+        Subtract 100 from Need-To-Be-Charged Amount
     
-when Difference comes down to 0 or less END the loop
+END LOOP when Need-To-Be-Charged Amount comes down to 0 or less
 
 RETURN the number of transactions & how much you have paid
 ```
