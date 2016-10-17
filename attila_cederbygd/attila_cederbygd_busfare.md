@@ -5,9 +5,9 @@
 	START
 		INPUT Kostnad
 		FOR Valörer längd:
-			Valör / Kostnad = hur många går valör på kostnaden
-			Räknare += Valör / Kostnad
-			Valör % Kostnad = det som blir kvar efter divisionen
+			Valör / Kostnad = hur många av valören går det på kostnaden
+			Räknare += (Valör / Kostnad)
+			Valör % Kostnad = resten av divisionen
 			Kostnad = Valör % Kostnad
 		RETURN ’Antal transaktioner: ' +  Räknare
 	STOP
