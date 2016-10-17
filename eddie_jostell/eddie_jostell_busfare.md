@@ -2,9 +2,8 @@
 
 ### Pseudokod För BusFare.
 
-
 **START**
-
+```
 **Calculate BusFare.**
 
 var travelCash = prompt("Hur mycket vill du resa för?");
@@ -20,3 +19,4 @@ function addBusFare(x,y,z) {
 }
 
 
+```
