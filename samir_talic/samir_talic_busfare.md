@@ -1,5 +1,6 @@
 #Inlämningsuppgift - pseudokod lösning#
 
+##START##
 
 declare function busfare with 1 paramiter(price of trip).
 
@@ -37,7 +38,7 @@ declare function busfare with 1 paramiter(price of trip).
 end of function
 	
 	
-				
+##STOP##		
 	
 		
 	
