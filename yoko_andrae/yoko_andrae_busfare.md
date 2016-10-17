@@ -9,9 +9,12 @@ __MEMO__
   START
   
     Check how much Bus fare is
-    WHILE (Bus fare is less than balance)
     
-      WHILE Bus fare is (more than 500)
+    WHILE Bus fare is less than balance
+    move to the charging loops
+    
+      //Charging loops start
+      WHILE Bus fare is more than 500
           Charge 500 as many time as possible
           Subtract 500 from balance after every charge
           Add 1 to the total number of Transactions after every charge
@@ -19,7 +22,7 @@ __MEMO__
        
       move to next loop
 
-      WHILE Bus fare is (less than 500 & more than 200)
+      WHILE Bus fare is less than 500 & more than 200
           Charge 200 as many time as possible
           Subtract 200 from balance after every charge
           Add 1 to the total number of Transactions after every charge
@@ -27,12 +30,13 @@ __MEMO__
       
       move to next loop
 
-      WHILE Bus fare is (less than 200 and more than 100)
+      WHILE Bus fare is less than 200 & more than 100
           Charge 100 as many time as possible
           Subtract 100 from balance after every charge
           Add 1 to the total number of Transactions after every charge
       
       END WHILE
+      //Charging loops end
 
   END WHILE
 ```
