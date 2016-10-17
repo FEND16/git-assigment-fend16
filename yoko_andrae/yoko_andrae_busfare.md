@@ -13,32 +13,34 @@ __MEMO__
     WHILE Bus fare is less than balance
     move to charging stage
     
-      //Charging start - starting from 500 bills
-      IF Bus fare is more than or equal to 500
-          Charge 500 as many times as possible
-          Subtract amount for this stage from balance
-          Add the number of Transactions for this stage
-      END IF
-       
-      move to next stage - charging with 200 bills
+        //Charging start - starting from 500 bills
+        IF Bus fare is more than or equal to 500
+            Charge 500 as many times as possible
+            Subtract amount for this stage from balance
+            Add the number of Transactions for this stage
+        END IF
 
-      IF Bus fare is less than 500 & more than or equal to 200
-          Charge 200 as many times as possible
-          Subtract amount for this stage from balance
-          Add the number of Transactions for this stage
-      END IF
-      
-      move to next stage - charing with 100 bills
+        move to next stage - charging with 200 bills
 
-      IF Bus fare is less than 200 & more than or equal to 100
-          Charge 100 as many times as possible
-          Subtract amount for this stage from balance
-          Add the number of Transactions for this stage
-      
-      END IF
-      //End charging
+        IF Bus fare is less than 500 & more than or equal to 200
+            Charge 200 as many times as possible
+            Subtract amount for this stage from balance
+            Add the number of Transactions for this stage
+        END IF
 
-  END WHILE
+        move to next stage - charing with 100 bills
+
+        IF Bus fare is less than 200 & more than or equal to 100
+            Charge 100 as many times as possible
+            Subtract amount for this stage from balance
+            Add the number of Transactions for this stage
+
+        END IF
+        //End charging
+
+    END WHILE
   
-  RETURN the number of transactions and balance
+    RETURN the number of transactions and balance
+  
+ END
 ```
