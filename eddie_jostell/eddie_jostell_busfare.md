@@ -14,7 +14,9 @@ function busFare() {
    var cost3 = 100;
 
 OM travelCost > 10000 = "Kortet tar inte mer pengar, försök med en mindre summa!"
-OM travelCost < 10000
+OM travelCost % 500 === 0 
+OM travelCost % 200 === 0
+Om travelCost % 100 === 0
 Välj minst antal möjiga transaktioner för att sätta in pengarna på busskortet.
 }
 
@@ -22,11 +24,3 @@ busFare();
 ```
 **STOP**
 
-Problem 
-
-funktionen ska ta ut hur många gånger det behövs 
-för att fylla på ett "busskort" som ska innehålla en viss
-summa tex 500kr då behövs 1 transaktion på 500kr.
-
-Men ska man fylla på med tex 800kr så måste flera
-transaktioner göras. 500 + 200 + 100.
