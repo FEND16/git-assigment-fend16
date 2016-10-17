@@ -1,7 +1,7 @@
 # Pseudokod
 
 ### Start
-```javascript
+```
 function busfare(k)    
     var addMoney = k
     var transactions = 0
@@ -11,15 +11,15 @@ function busfare(k)
             addMoney - 500
             transactions + 1
         
-        else if addMoney >= 200
+        else if addMoney >= 101
             addMoney - 200
             transactions + 1
         
         else
-            add money - 100
+            addMoney - 100
             transactions + 1
      
-     return Åka för? k Antal transaktioner: transactions
+     return Åka för? 800. Antal transaktioner: 3
      
 busfare(800)
 ```
