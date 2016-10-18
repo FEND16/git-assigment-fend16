@@ -1,34 +1,39 @@
 //Inlämningsuppgift GIT
-//Funktionen transaction anropas och en prompt öppnas där användaren blir tillfrågad hur stort belopp man vill handla för
-var money = transaction(prompt('Åka för?','Belopp:'));
-//Funktionen transaction tar in ett argument, belopp
-function transaction(money) {
-	//En array skapas med 3 olika belopp man kan fylla på sitt sl-kort med
-	var topUpAmounts = [500, 200, 100];
-	//Variabeln transactionCount skapas som ska hålla koll på hur många transaktioner som görs
+//En prompt öppnas där användaren blir tillfrågad hur stort belopp man vill handla för, värdet sparas ner i variabeln money
+var money = prompt('Åka för?','Belopp:');
+//Funktionen busfare tar in ett argument, money
+function busfare(money) {
+	//En transaktionsräknare skapas som ska hålla koll på hur många transaktioner som görs
 	var transactionCount = 0;
-	//Om användarens belopp är mindre än eller likamed maxbelopp (10.000:-) körs funktionen
+	//Om köparens pengar är mindre än eller likamed 10.000:- kör funktionen
 	if (money <= 10000) {
-		//For-loopen kollar längden på arrayens index så länge i är mindre än arrayens index längd
-		for (var i = 0; i < topUpAmounts.length; i++) {
-			//En ny variabel skapas som håller nuvarande index värde på array
-			var topUpAmount = topUpAmounts[i];
-			/* Om beloppet är högre eller likamed första index värde på arrayen kör vi koden innanför while,
-			annars testar vi nästa värde i arrayens index */
-			while (money >= topUpAmount) {
-				//Användarens pengar subtraheras med nuvarande index värde och sparas i variabel money
-				money -= topUpAmount;
-				/* Om beloppet har subtraherats med något av arrayens index värde lägger
-				vi till en transaktion på variabel transactionCount */
-				transactionCount++;
+			//Medans pengarna har högre värde än 0:- kör if-satsen
+			while (money > 0) {
+				//Om pengarna har högre värde än 400:-
+				if (money > 400) {
+					//Dras 500:- av från beloppet
+					money -= 500;
+					//En transaktion läggs till om condition är true
+					transactionCount++;
+					//Annars om pengarnas värde är högre än 100:- och pengarnas värde är mindre än 400:-
+				} else if (money > 100 && money < 400) {
+					//Dras 200:- av från beloppet
+					money -= 200;
+					//En transaktion läggs till om condition är true
+					transactionCount++;
+					//Annars om pengarnas värde är mindre än eller likamed 100:-
+				} else if (money <= 100) {
+					//Dras 100:- av från beloppet
+					money -= 100;
+					//En transaktion läggs till om condition är true
+					transactionCount++;
+				}
 			}
-		}
-		//Returnerar hur många transaktioner funktionen har gjort
+		//Returnerar antal transaktioner som är gjorda
 		return 'Antal transaktioner: ' + transactionCount + '.';
 	}	else {
-		//Returnerar om användarens belopp är högre än maxbelopp (10.000:-) avslutas funktionen
+		//Annars om pengarnas värde är högre än 10.000:- returneras stringen om att beloppet är för högt
 		return 'För högt belopp.';
 	}
 }
-//Popup skriver ut funktionen på skärmen
-alert(money);
+alert(busfare(money));
