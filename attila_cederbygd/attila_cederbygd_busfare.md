@@ -1,5 +1,6 @@
 # Busskort Pseudokod
 Funktion som beräknar det minsta antalet transaktioner du behöver göra för att åka buss med de pengar du har
+
 	START
 		VAR Kostnad
 		VAR Valörer: Array med valörer: [500, 200, 100]
