@@ -6,29 +6,36 @@ var busfareTransCalc = function(K){
 	var y = 200;
 	var z = 100;
 	var bills = [y ,z, x];
-	// sortera valörer högst till lägst
+	// sorterar valörer högsta till lägsta
 	bills.sort(function(a, b){return b-a;});
-	// räknare för transaktioner
+	// räknare för antal transaktioner
 	var tCount = 0;
 
-	for (var i = 0; i < bills.length; i++) {
-		if(Math.floor(cost / bills[i]) > 0 ){
-			// Hur många gånger går valören på kostnaden?
-			console.log((Math.floor(cost / bills[i])) + ' av valören ' + bills[i]);
+	while(cost > 0){ // yttre loop
+		for (var i = 0; i < bills.length; i++) { // inre loop för varje valör
+			// Om valören är delbar med summan skriv ut
+			if(Math.floor(cost / bills[i]) > 0 ){
+				// Valören delat med kostnaden
+				console.log((Math.floor(cost / bills[i])) + ' av valören ' + bills[i]);
 
-			// Räknaren += antalet valören går på kostnaden
-			tCount += Math.floor(cost / bills[i]);
+				// Räknaren adderas med antalet gånger valören går på kostnaden
+				tCount += Math.floor(cost / bills[i]);
 
-			// Resten av divisionen dras av från kostnaden
-			console.log('Resten av divisionen ' + cost + ' / ' + bills[i] + ' = ' + cost % bills[i]);
-			cost = cost % bills[i];
-			console.log('Summa: ' + cost);
+				// Kostnaden blir resten av divisionen
+				cost = cost % bills[i];
+				//console.log('Resten av divisionen ' + cost + ' / ' + bills[i] + ' = ' + cost % bills[i]);
+				//console.log('Summa: ' + cost);
+			}
 		}
-		if(cost === 0){
-			break;
+		if(cost > 0){
+			console.log('Det blev en rest: ' + cost);
+			cost += K;
+			tCount = 0; 
+			console.log('Resten adderat med den ursprungliga summan: ' + cost);
+			console.log('-- resettar inre loopen--');
 		}
 	}
-	console.log('Rest: ' + cost);
+	//console.log('Rest: ' + cost);
 	return 'Antal transaktioner: ' + tCount;
 };
 
