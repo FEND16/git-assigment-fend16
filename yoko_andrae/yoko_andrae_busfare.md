@@ -1,11 +1,31 @@
-# Bus fare assignment
+# PSEUDO Bus Fare
 
-WHILE BusFare - ChargingAmount (= "Difference") > 0
-    IF "Difference" is between 401 and 10000
-        Charge 500 notes untill difference becomes less than 401
-        Add number of transactions
-    ELSE IF "Difference" is between 200 and 499
-        Charge 200 notes untill difference becomes less than 200
-        Add number of transactions
-    ELSE IF "Difference" is between 1 and 199
-when "Difference" comes to 0 or less END the loop
+
+__MEMO__
+
+> laddar kortet varje gång 500, 200 eller 100</br>
+> laddar så några som möjligt, och inte tanka på mer pengar än nödvändigt</br>
+
+```Pseudo
+WHILE Need-To-Be-Charged Amount (= BusFare - Charged Amount) > 0, continue loop
+
+    IF 400 < Need-To-Be-Charged Amount <= 10000
+        Add 500 to Charged Amount
+        Add 1 to transaction
+        Subtract 500 from Need-To-Be-Charged Amount
+        
+    ELSE IF 100 < Need-To-Be-Charged Amount <= 400
+        Add 200 to Charged Amount
+        Add 1 to transaction
+        Subtract 200 from Need-To-Be-Charged Amount
+        
+    ELSE IF 0 < Need-To-Be-Charged Amount <= 100
+        Add 100 to Charged Amount
+        Add 1 to transaction
+        Subtract 100 from Need-To-Be-Charged Amount
+    
+END LOOP when Need-To-Be-Charged Amount comes down to 0 or less
+
+RETURN the number of transactions & how much you have paid
+```
+
