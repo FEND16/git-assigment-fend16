@@ -16,10 +16,7 @@ och endast 3 transaktionsbelopp finns tillgängliga, 500kr, 200kr och 100kr.
 3. Skapa en räknare för hur många transaktioner som gjorts, startar på 0.
 4. Sätter biljettpris till 0.
 5. Repetera följande serie av steg så länge biljettpriset är större än priset för resan:
-
-> Går igenom 3 olika villkor/vägval för att addera korrekt transaktionsbelopp till biljettpris.
-> Räknar upp transaktioner med 1. 
-
+_Går igenom 3 olika villkor/vägval för att addera korrekt transaktionsbelopp till biljettpris. Räknar upp transaktioner med 1._ 
 6. Returnerar antalet transaktioner som gjorts.
 
 
