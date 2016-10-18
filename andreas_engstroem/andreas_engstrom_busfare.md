@@ -17,4 +17,5 @@
 		* Returnera antal transaktioner genomförda
 	* ANNARS
 		* Returnera användarens belopp är för högt
-* STOPP
+
+**STOPP**
