@@ -5,6 +5,7 @@
 > laddar kortet varje gång 500, 200 eller 100
 > laddar så några som möjligt, och inte tanka på mer pengar än nödvändigt
 
+
 ```Pseudo
 WHILE Need-To-Be-Charged Amount (= BusFare - Charged Amount) > 0, continue loop
 
@@ -22,6 +23,7 @@ WHILE Need-To-Be-Charged Amount (= BusFare - Charged Amount) > 0, continue loop
         Add 100 to Charged Amount
         Add 1 to transaction
         Subtract 100 from Need-To-Be-Charged Amount
+
 
 END LOOP when Need-To-Be-Charged Amount comes down to 0 or less
 
