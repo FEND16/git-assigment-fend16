@@ -23,7 +23,12 @@ när resultat dvs pengar är slut stannar loopen
 			resultat = resultat - 500;  
 			transaktion ++;
 			}
-			else if(resultat >= 101 && resultat < 500){
+			else if(resultat >= 400 && resultat < 500){
+			ladda = ladda + 500;
+			resultat = resultat - 500;
+			transaktion ++;
+		}
+			else if(resultat >= 150 && resultat < 400){
 			ladda = ladda + 200;
 			resultat = resultat - 200;
 			transaktion ++;
