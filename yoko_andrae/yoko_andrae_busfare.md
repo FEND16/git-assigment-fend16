@@ -2,7 +2,7 @@
 
 ###MEMO
 
-> laddar kortet varje gång 500, 200 eller 100
+> laddar kortet varje gång 500, 200 eller 100<br>
 > laddar så några som möjligt, och inte tanka på mer pengar än nödvändigt
 
 
