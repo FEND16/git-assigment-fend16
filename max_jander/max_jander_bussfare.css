@@ -1,0 +1,51 @@
+	body {
+
+			background-color: #eee;
+            font-family: "Courier New", Courier, monospace	;
+ 	}
+
+	input {
+
+			height: 34px;
+			width: 70%;
+			border-radius: 0px;
+			border: 1px solid;
+	}
+
+ 	.divTable {
+
+		    margin: auto;
+            padding: 15px;
+            background-color: #fff;
+            width: 60%;
+            float: center;
+            text-align: left;
+            border: 1px;
+             border-radius: 2px;
+            overflow: auto;
+            text-transform: lowercase;
+	}
+
+	.warning {
+
+		  text-decoration: underline;
+		  font-style: italic;
+		  color: #ff0000;
+		  text-transform: lowercase;
+		  font-size: 12px;
+		  text-align: right;
+	 }
+
+	 .topic {
+
+		  	margin: auto;
+		  	padding: 15px;
+			background-color: #fff;
+			width: 60%;
+			float: center;
+			text-align: center;
+			border: 1px;
+			border-radius: 2px;
+			overflow: auto;
+			text-transform: lowercase;
+		}
