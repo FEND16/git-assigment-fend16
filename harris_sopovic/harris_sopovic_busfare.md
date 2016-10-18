@@ -8,5 +8,6 @@
   - Räkna ut mellanskillnad.  
   - Fyll på saldot med högsta valör tills priset för resan är nått.  
   - Lägg till 1 transaktion för varje påfyllning gjord.  
-+ Returnera antal transaktioner gjorda.   
++ Returnera antal transaktioner gjorda.     
+
 ##### STOPP 
