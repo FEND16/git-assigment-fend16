@@ -1,79 +1,85 @@
-/*
-var travelCost = prompt("Hur mycket vill du resa för?");
 
 
+//Prompt som frågar vilken summa du vill resa för
+
+var travelCost = prompt('Hur mycket ska du åka för?');
+//Transaktions räknare som börjar på 0 för varje sedel summa som läggs till för att få den önskade summan. 
+//Det vill säga räknar hur många 500, 200 100 kr som behövs för att få den önskade inmatade summan.
+var transactionsFive = 0;
+var transactionsTwo = 0;
+var transactionsOne = 0;
+//Array med värden som kan sättas in på kortet i taget för att få summan man vill ha på kortet.
+var transactionValues = [100,200,500];
+// busFare funktionen
 function busFare() {
-var count = 0;
-
-    var cost1 = 500;
-    var cost2 = 200;
-    var cost3 = 100;
-/*
-    var five = travelCost / cost1;
-    var two = travelCost / cost2;
-    var one = travelCost / cost3;
-
-
+//Kollar först om summan man slagit in är större än max gränsen på kortet, om så är fallet så får man börja om.
     if (travelCost > 10000) {
         console.log("Maxbelopp är 10000 starta om och försök igen");
-    }
-    else if (travelCost % cost1 === 0) 
-    {
-
-        console.log("Sätt in " + cost1 + " kr " + five + " gång(er) ");
-    }
-    else if (travelCost % cost1 !== 0) {
-             //console.log(cost1 %  )
-    }
-    */
-
- //   while (travelCost >= 100) {
-
-/*    }
-
-    
-
-}
-
-busFare(850);*/
-
-
-var travelCost = prompt("Hur mycket vill du resa för?");
-
-function busFare(cost) {
-
-    var transactions = 0;
-
-    var fiveHundred = 500;
-    var twoHundred = 200;
-    var oneHundred = 100;
-
-    if (travelCost > 10000) {
-        return console.log("Maxbelopp är 10000 starta om och försök igen");
+        return; 
     }
 
-    if(Math.floor(travelCost / fiveHundred) !== 0){
-      transactions = Math.floor(travelCost / fiveHundred);
-      travelCost -= fiveHundred * transactions;
-      console.log(travelCost);
+ console.log("Vald summa att föra in på kortet: " + travelCost + "kr"); //Skriver ut inmatade summan
 
-      if(Math.floor(travelCost / twoHundred) !== 0){
-        var intermediateTransaction = Math.floor(travelCost / twoHundred);
-        transactions += intermediateTransaction;
-        travelCost -= twoHundred * intermediateTransaction;
-        console.log(travelCost);
+// If satsen kollar om inmatade summan delat på 500 går jämt ut. eller om summan är större än 400.
+//Det vill säga att den kollar 500 lappar.
+    if(Math.floor(travelCost / transactionValues[2]) !== 0 || travelCost > 400 ){
+     //Kollar travelCost / 500 och avrundar ner och ger 
+     //nytt värde till transactionFive dvs lägger till en transaktion av 500kr
+     //och drar bort från travelCost.
+     
+      transactionsFive =  Math.floor(travelCost / transactionValues[2]);
+      travelCost = travelCost - transactionValues[2] * transactionsFive;
+        //Kollar hur högt värdet på travelCost är för tillfället och kollar om det behövs läggas in ytterligare
+        // 500 lappar. 
+      if(travelCost > 400 && travelCost < 500){
+        transactionsFive++;
+        return;
       }
-
-      if(Math.floor(travelCost / oneHundred) !== 0){
-        var intermediateTransaction = Math.floor(travelCost / oneHundred);
-        transactions += intermediateTransaction;
-        travelCost -= oneHundred * intermediateTransaction;
-        console.log(travelCost);
-      }
-
     }
-    console.log('Rest av travelCost '+ travelCost);
-    console.log('Antal transaktioner: '+ transactions);
+
+// If satsen kollar om inmatade summan delat på 200 går jämt ut. eller om summan är större än 100 och mindre än 400.
+// 200 lappar.
+
+    if(Math.floor(travelCost / transactionValues[1]) !== 0 ||travelCost > 100 && travelCost < 400){
+        //Kollar värde på travelCost / 200 och avrundar ner och ger 
+        //nytt värde till transactionsTwo 
+        //och drar bort från travelCost.
+        transactionsTwo =  Math.floor(travelCost / transactionValues[1]);
+        travelCost = travelCost - transactionValues[1] * transactionsTwo;
+        //Kollar värdet på travelCost för tillfället och kollar om det behövs läggas till 
+        // ytterligare 200 lappar.
+      if(travelCost > 100 && travelCost < 400){
+        transactionsTwo++;
+        return;
+
+      }
+    }
+
+// If satsen kollar om inmatade summan delat på 100 går jämt ut. eller om summan är större än 0 och mindre än 400.
+// 100 lappar.
+
+    if(Math.floor(travelCost / transactionValues[0]) !== 0 || travelCost > 0 && travelCost < 100){
+       //Kollar värde på travelCost / 100 och avrundar ner och ger 
+       //nytt värde till transactionsOne 
+       //och drar bort från travelCost.
+        transactionsOne =  Math.floor(travelCost / transactionValues[0]);
+        travelCost = travelCost - transactionValues[0] * transactionsOne;
+        //Kollar värdet på travelCost och kör ifsatsen OM vilkoret stämmer
+        //Vilket då adderar ytterligare en transaktion.
+      if(travelCost > 0 && travelCost < 100){
+        transactionsOne++;
+        return;
+      }
+    }
   }
-
+// Kallar på funktionen
 busFare();
+
+// Loggar ut Antal transaktioner per valör
+// och totlala antalet gjorda transaktioner.
+console.log("Antal transaktioner per 500kr " + transactionsFive);
+console.log("Antal transaktioner per 200kr " + transactionsTwo);
+console.log("Antal transaktioner per 100kr " + transactionsOne);
+console.log('Totalt antal transaktioner: ' + (transactionsOne + transactionsTwo + transactionsFive));
+
+
