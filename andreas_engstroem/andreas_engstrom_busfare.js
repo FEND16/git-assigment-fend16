@@ -1,4 +1,3 @@
-//Inlämningsuppgift GIT
 //En prompt öppnas där användaren blir tillfrågad hur stort belopp man vill handla för, värdet sparas ner i variabeln money
 var money = prompt('Åka för?','Belopp:');
 //Funktionen busfare tar in ett argument, money
