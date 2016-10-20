@@ -5,34 +5,36 @@
 declare function busfare with 1 paramiter(price of trip).
 
  	declare an variabel which hold amount of transactions.
+	
+	round up price of trip to nearest 100 and save it to an variabel.
+	
+	declare an variabel which hold the amount wich was added with rounding up.
  
- 	check how meny 500 goes in price of trip and declare an variabel(howMeny500) which hold this amount
+ 	check how meny 500 goes in rounded price of trip and declare an variabel(howMeny500) which hold this amount
 	
 		if howMeny500 > 0
 		
 			amount of transaction = amount of transaction + howMeny500
-			price of trip = priceof trip - howMeny500*500
+			rounded price of trip = rounded priceof trip - howMeny500*500
 				
 
-	check how meny 200 goes in price of trip and declare an variabel(howMeny200) which hold this amount
+	check how meny 200 goes in rounded price of trip and declare an variabel(howMeny200) which hold this amount
 	
 		if howMeny200 > 0
  	
 				amount of transaction = amount of transaction + howMeny200
-				price of trip = priceof trip - howMeny200*200
+				rounded price of trip = rounded priceof trip - howMeny200*200
 				
 	
-	check how meny 100 goes in price of trip and declare an variabel(howMeny100) which hold this amount
+	check how meny 100 goes in rounded price of trip and declare an variabel(howMeny100) which hold this amount
 	
-		if howMeny200 > 0
+		if howMeny100 > 0
 		
 				amount of transaction = amount of transaction + howMeny100
-				price of trip = priceof trip - howMeny100*100
-	
-	If price of trip > 0
-	
-		amount of transactions ++
-		
+				rounded price of trip = rounded priceof trip - howMeny100*100
+				
+	log out amount wich was added with rounding up.
+			
 	return amount of transactions
 				
 end of function
