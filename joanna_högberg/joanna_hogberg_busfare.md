@@ -23,35 +23,35 @@ _Går igenom 3 olika villkor/vägval för att addera korrekt transaktionsbelopp 
 
 
 ````
-_pris för resan_ ← input (pris för din resa)
+pris för resan ← input (pris för din resa)
 
-**algoritm** laddaBussKort( _pris för resan_ ){
+ALGORITM LADDABUSSKORT ( pris för resan ){
 
-    var transaktioner = 0;
-    var biljettpris = 0;
+    transaktioner ← 0;
+    biljettpris ← 0;
 
-    **for** (som körs så länge bussbiljetten är mindre än priset för resan) {
-        **do**
-        **if** (som kontrollerar att priset för resan ej överstiger 10' och att användaren angett en siffra){
+    FOR (som körs så länge bussbiljetten är mindre än priset för resan) {
+        DO
+        IF (som kontrollerar att priset för resan ej överstiger 10' och att användaren angett en siffra){
 
         }
-        **else** {
-            **if** (biljettpriset + 500kr är mindre el lika med priset för resan + 100kr){
-                500kr adderas till biljettpriset;
+        ELSE {
+            IF (biljettpriset + 500kr är mindre el lika med priset för resan + 100kr){
+                biljettpris ← biljettpris+500kr
             }
-            **else if** (biljettpriset + 201kr är mindre el lika med priset för resan + 100kr){
-            200kr adderas till biljettpriset;
+            ELSE IF (biljettpriset + 201kr är mindre el lika med priset för resan + 100kr){
+                biljettpris ← biljettpris+200kr
             }
-            **else if** (biljettpriset + 101kr är mindre el lika med priset för resan + 100kr){
-            100kr adderas till biljettpriset;
+            ELSE IF (biljettpriset + 101kr är mindre el lika med priset för resan + 100kr){
+                biljettpris ← biljettpris+100kr
             }
         }
     För varje varv i loopen räknas transaktioner upp med 1.
     }
-    return _transaktioner_  
+    return transaktioner 
 }
 
-laddaBussKort( _pris för resan_ )
+laddaBussKort( pris för resan )
 
 ```
 
