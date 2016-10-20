@@ -1,7 +1,11 @@
 function busfare(K){
-	var t = 0;//varibael som sparar antalet loopar
-	var b = 0;
+	var t = 0;//variabel som sparar antalet loopar
+	var b = 0;//busskortets startvärde
 	var a = K; // variabel med startvärde K men som kan minskas för varje loopning
+	if(K > 10000){
+			alert("För högt pris. Välj en billigare biljett");
+			K = prompt("Hur mycket kostar biljetten?");
+		}
 	while (K > b){
 		t++;
 		if (a > 500 ){ //kontrollerar först om vi kan sätta in 500 utan att slösa mer än 50
@@ -24,5 +28,5 @@ if (b !== 0){
 	}
 }
 
-var K = busfare(850);
-var K = busfare(1800);
+var K = prompt("Hur mycket kostar biljetten?");
+busfare(K);
