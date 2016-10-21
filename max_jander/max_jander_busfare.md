@@ -32,3 +32,14 @@ fillUp function(saldo, topUp)
 
 
 ```
+
+### Flowchart
+![Flowchart](busfare.png)
+
+
+### HTML & CSS
+Jag valde att göra en sida som man kunde slå in alting på, allt är inte skoj att se i Console logen
+
+Se nedanför
+
+https://maxjander.github.io/git-assigment-fend16/max_jander/
