@@ -1,2 +1,7 @@
+
 # ignore .DS_Store file
 .DS_Store
+# Ignore sublime files
+*.sublime-project
+*.sublime-workspace
+*.html
